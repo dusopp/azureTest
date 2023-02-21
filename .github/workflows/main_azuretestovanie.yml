@@ -16,6 +16,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: List directory
+        uses: CmdLine@2
+        with:
+              script: 'dotnet --list-sdks'
+
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v1
         with:
